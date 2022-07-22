@@ -1,9 +1,9 @@
-
 #ifndef COMMAND_HANDLER
 #define COMMAND_HANDLER
 
-typedef struct command_arguments
-{
+#include <stdbool.h>
+
+typedef struct command_arguments {
     bool type_A;
     int NUM_A;
     bool type_b;
@@ -16,7 +16,7 @@ typedef struct command_arguments
     char *expression;
     char *file_name;
     bool piped;
-}command_arguments;
+} command_arguments;
 
 command_arguments read_command(int argc, char *argv[], command_arguments arguments);
 

@@ -1,8 +1,10 @@
 #ifndef LINE_HANDLER
 #define LINE_HANDLER
+#include "command_handler.h"
+#include <stdbool.h>
+#include <unistd.h>
 
-typedef struct line_struct
-{
+typedef struct line_struct {
     char *string;
     size_t line_len;
     int line_number;
@@ -13,7 +15,7 @@ typedef struct line_struct
     bool found_match;
     bool print_next;
     bool print_previous;
-}line_struct;
+} line_struct;
 
 line_struct execute(command_arguments arguments, line_struct line);
 
